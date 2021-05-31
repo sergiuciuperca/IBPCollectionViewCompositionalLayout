@@ -425,8 +425,9 @@
             layoutAttributes.zIndex = decorationItem.zIndex;
 
             layoutAttributes.frame = frame;
-            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:sectionIndex];
-            cachedDecorationAttributes[indexPath] = layoutAttributes;
+//            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:sectionIndex];
+//            cachedDecorationAttributes[indexPath] = layoutAttributes;
+            cachedDecorationAttributes[[NSString stringWithFormat:@"%@-%zd-%d", decorationItem.elementKind, sectionIndex, 0]] = layoutAttributes;
         }
 
         CGRect insetsContentFrame = contentFrame;
